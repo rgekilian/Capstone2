@@ -143,17 +143,4 @@ Additionnaly, "Time to import" and "time to export" measure the duration require
 For any inquiries or further information, please reach out to [kilren@gmail.com](mailto:kilren@gmail.com).
 
 
-
-
---------------------
-This project demonstrates the possibility of predicting the Corruption Perception Index (CPI) by utilizing World Bank development data indicators. Notably, there is a strong correlation between these indicators, as development and corruption are highly interdependent. Factors such as the Rule of Law, strong institutions, higher income, and higher education positively influence the CPI, while high levels of corruption negatively impact these indicators.
-
-Regarding the question of the most significant indicators, three major trends can be identified among the previously listed indicators:
-
-"Regulatory quality" captures perceptions of the government's ability to formulate and implement effective policies and regulations that promote private sector development. Similarly, "Voice and accountability" reflects perceptions of citizens' participation in government selection, along with freedom of expression, association, and a free media. Both these indicators play a crucial role, indicating that the rule of law and democracy are key determinants of corruption perception in a country.
-
-The top 10 most significant indicators can be categorized into three groups: (i) Economic development and income levels; (ii) Social dividends and development, primarily in health and education; and (iii) Rule of law and political stability. This emphasizes that corruption is influenced by a wide range of indicators, all of which rely on the country's level of development.
-
-Lastly, "Time to import" and "time to export" measure the duration required to comply with import and export procedures in a country. The strong correlation between these indicators and the CPI is intriguing, as they serve as both consequences and measurements of potential corrupt practices. Lengthier procedures in more corrupt countries contribute to this correlation.
-
 However, the limitations of the Corruption Perception Index lie in the fact that it relies on subjective perceptions. In contrast, indicators such as "Time to import" and "time to export" provide an interesting complement to this index, as they offer a tangible and measurable measure of corruption. Further exploration of indicators that could serve as measurable and concrete corruption indicators would be valuable. Moreover, the model's accuracy could enable the estimation of corruption levels in countries where Transparency International is unable to assess corruption perception, thereby providing a proxy measurement of corruption.
