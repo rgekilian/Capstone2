@@ -23,12 +23,24 @@ Corruption is a pervasive issue that significantly affects economies and societi
 
 This information would be vital in providing actionable insights for policy-makers and stakeholders aiming to mitigate corruption in various countries. By knowing which factors are most linked to corruption perception, targeted strategies can be developed to address those specific areas.
 
-#### Data Sources
+#### Data
 
-The necessary data will be sourced from the following:
+For this exercise we will be using the following datasets:
 
-1. [Corruption Perceptions Index (CPI)](https://www.transparency.org/en/cpi) - Transparency International
-2. [World Bank Indicators](https://databank.worldbank.org/source/world-development-indicators) - World Bank's Open Data
+1. **Corruption Perceptions Index (CPI)** - Transparency International
+    - **Data Source:** [Transparency International's CPI](https://www.transparency.org/en/cpi).
+    - **Description:** The CPI is a composite index that ranks countries and territories based on their public sector's perceived corruption levels. The index is formed from a combination of surveys and corruption assessments sourced from various respected institutions, making it globally recognized as a leading corruption indicator. The index is scored on a scale of 0 (highly corrupt) to 100 (very clean).
+    - **Limitations:** The CPI is perception-based and does not directly measure corruption levels. Instead, it compiles data from different sources, capturing the views of business people and country experts on the public sector's corruption levels. As such, the CPI should not be viewed as a definitive judgment of a society's overall corruption levels but as an evaluation of public sector corruption.
+    - **Collection Methodology:** The CPI is derived from 13 surveys and assessments from 12 independent institutions. These sources typically define corruption as "the misuse of public power for private benefit." A country must have at least three data sources available for a given year to receive a CPI score.
+    - **Update Frequency:** Transparency International publishes the CPI annually.
+    - **Use Note:** CPI scores prior to 2012 are not directly comparable with scores from subsequent years due to methodology changes. Thus, these scores will not be utilized in our analysis.
+    
+2. **World Development Indicators (WDI)** - World Bank
+    - **Data Source:** [World Bank's Open Data](https://databank.worldbank.org/source/world-development-indicators)
+    - **Description:** The World Bank Indicators encompass a wide range of economic, social, and environmental data about World Bank member countries and other economies. These indicators include metrics like GDP, education, health, labor, trade, and numerous others, offering comprehensive insights into various development aspects globally. Each indicator has a specific scale relevant to the data it presents. The dataset provided for this analysis contains 1,478 indicators addressing over 90 topics.
+    - **Limitations:** While these indicators offer valuable insights, they come with certain limitations, including varying data quality across countries, potential errors due to statistical estimation techniques, and some data being outdated or missing for certain countries or years.
+    - **Collection Methodology:** The World Bank sources data from various national and international sources, including statistical publications and databases maintained by countries, UN agencies, various international and regional organizations, and academic sources. The data undergoes rigorous quality checks before being made available on the platform.
+    - **Update Frequency:** The World Bank continuously updates its datasets as fresh data becomes available, though the frequency can vary depending on the data source and indicator.
 
 #### Methodology
 
@@ -51,7 +63,7 @@ Upon conducting our analysis, we discovered a high degree of correlation among t
 
 ![Gradient Boosting Regressor](images/ActualVsPredicted.png)
 
-Despite this, our predictive models were successful in accurately predicting the Corruption Perceptions Index (CPI). The Gradient Boosting Regressor model outperformed the rest, demonstrating a Coefficient of Determination exceeding 0.98 (with 1 indicating a perfect fit).
+Despite this, our predictive models were successful in accurately predicting the Corruption Perceptions Index (CPI). The Gradient Boosting Regressor model outperformed the rest, demonstrating a Coefficient of Determination exceeding 0.98 (with 1 indicating a perfect fit). Which translates an average error of 1.6 points on the CPI scale.
 
 ##### Answering the research question
 
@@ -61,33 +73,34 @@ Yes, the World Bank's Open Data indicators have substantial predictive power for
 
 2. "What are the most significant World Bank indicators that influence the Corruption Perception Index (CPI) in a country?"
 
+
 Due to the high degree of correlation among the indicators, it is difficult to identify the most significant indicators. However, the following indicators were found to be the most influential:
 
-1. Access to clean fuels and technologies for cooking (% of population)
-2. Political Stability and Absence of Violence/Terrorism: Estimate
-3. PM2.5 pollution, population exposed to levels exceeding WHO Interim Target-3 value (% of total)
-4. Time to import, documentary compliance (hours)
-5. Voice and Accountability: Estimate
-6. Domestic private health expenditure per capita (current US$)
-7. Mortality rate, adult, female (per 1,000 female adults)
-8. Adjusted savings: education expenditure (% of GNI)
-9. Time to export, border compliance (hours)
-10. Refugee population by country or territory of origin
-11. Adjusted savings: particulate emission damage (% of GNI)
-12. Time to export, documentary compliance (hours)
-13. PM2.5 air pollution, mean annual exposure (micrograms per cubic meter)
-14. Automated teller machines (ATMs) (per 100,000 adults)
-15. Number of deaths ages 10-14 years
-16. Adjusted net national income per capita (constant 2015 US$)
-17. Income group
-18. Population ages 20-24, male (% of male population)
+1. Regulatory Quality: Estimate
+2. Voice and Accountability: Estimate
+3. Time to import, documentary compliance (hours)
+4. Time to export, documentary compliance (hours)
+5. Agriculture, forestry, and fishing, value added (% of GDP)
+6. Price level ratio of PPP conversion factor (GDP) to market exchange rate
+7. Children out of school, primary
+8. Political Stability and Absence of Violence/Terrorism: Estimate
+9. Income group
+10. Agriculture, forestry, and fishing, value added per worker (constant 2015 US$)
+11. PM2.5 air pollution, population exposed to levels exceeding WHO guideline value (% of total)
+12. Individuals using the Internet (% of population)
+13. Refugee population by country or territory of origin
+14. PM2.5 pollution, population exposed to levels exceeding WHO Interim Target-3 value (% of total)
+15. Prevalence of undernourishment (% of population)
+16. Tuberculosis case detection rate (%, all forms)
+17. Time to export, border compliance (hours)
+18. Adolescents out of school (% of lower secondary school age)
 19. Secure Internet servers (per 1 million people)
-20. School enrollment, secondary (% gross)
-21. Labor force participation rate for ages 15-24, total (%) (modeled ILO estimate)
-22. Agricultural land (% of land area)
-23. Lifetime risk of maternal death (%)
-24. Employment in agriculture, female (% of female employment) (modeled ILO estimate)
-25. Agriculture, forestry, and fishing, value added (% of GDP)
+20. Automated teller machines (ATMs) (per 100,000 adults)
+21. Depth of credit information index (0=low to 8=high)
+22. Children out of school (% of primary school age)
+23. Fixed broadband subscriptions (per 100 people)
+24. Time to resolve insolvency (years)
+25. Armed forces personnel (% of total labor force)
 
 ![Feature Importance](images/FeatureImportance.png)
 
